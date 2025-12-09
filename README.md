@@ -163,14 +163,14 @@ mvn spring-boot:run
 
 ```mermaid
 graph TD
-    A[Client (Send Message)] --> B(KafkaController);
+    A["Client (Send Message)"] --> B(KafkaController);
     B --> C(KafkaProducerService);
-    C --> D[Kafka Broker (demo-topic)];
+    C --> D["Kafka Broker (demo-topic)"];
     D --> E(KafkaConsumerListener);
-    E --> F[Stored in messages list];
-    G[Client (Get Messages)] --> H(KafkaController);
+    E --> F["Stored in messages list"];
+    G["Client (Get Messages)"] --> H(KafkaController);
     H --> F;
-    F --> I[Returns list of consumed messages];
+    F --> I["Returns list of consumed messages"];
 ```
 
 ---
